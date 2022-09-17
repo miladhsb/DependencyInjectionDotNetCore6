@@ -1,0 +1,17 @@
+﻿@page
+@using Microsoft.Extensions.Options
+@model DependencyInjectionDotNetCore6.Pages.ServiceGetHttpContextModel
+
+<h1 class="text-center">ServiceGetHttpContext</h1>
+@{
+   // var service = (IOptions<MyAppConfig>)Request.HttpContext.RequestServices.GetService(typeof(IOptions<MyAppConfig>));
+
+    //or
+    // var service = (IOptions<MyAppConfig>)Response.HttpContext.RequestServices.GetService(typeof(IOptions<MyAppConfig>));
+
+    //or
+     var service = (IOptions<MyAppConfig>)HttpContext.RequestServices.GetService(typeof(IOptions<MyAppConfig>));
+  
+     <h3>@service.Value.AppName</h3>
+     <h3>@service.Value.AppVersion</h3>
+}

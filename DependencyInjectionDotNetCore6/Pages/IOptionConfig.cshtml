@@ -1,0 +1,12 @@
+﻿@page
+@using Microsoft.Extensions.Options;
+
+@inject IOptions<MyAppConfig> Option
+@model DependencyInjectionDotNetCore6.Pages.IOptionConfigModel
+@{
+}
+
+<h1 class="text-center">IOptionConfig</h1>
+<h3>AppName:  @Option.Value.AppName </h3>
+<h3>AppVersion: @Option.Value.AppVersion</h3>
+

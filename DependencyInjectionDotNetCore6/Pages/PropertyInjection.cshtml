@@ -1,0 +1,8 @@
+﻿@page
+@using DependencyInjectionDotNetCore6.Services
+@inject  IAccountService accountService
+@model DependencyInjectionDotNetCore6.Pages.PropertyInjectionModel
+@{
+}
+<h1 class="text-center">PropertyInjection</h1>
+<h1> @accountService.login("admin", "123")</h1>
